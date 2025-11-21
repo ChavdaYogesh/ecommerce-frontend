@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fakestoreapi.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <title>Product Details - ShopWave</title>
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">ShopWave</a></div>
+            <div class="nav-right">
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="product-details" class="product-details-wrapper">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script src="scripts/details.js"></script>
+
+    <div id="toast">Item added to cart!</div>
+</body>
+
+</html>

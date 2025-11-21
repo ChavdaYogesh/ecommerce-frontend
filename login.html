@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fakestoreapi.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <title>Login / Sign Up - ShopWave</title>
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">ShopWave</a></div>
+        </div>
+    </header>
+
+    <div class="auth-container">
+
+        <div id="login-form" class="form-wrapper">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Login to manage your account</p>
+
+            <form id="login-form-element">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="login-pass" placeholder="Password" required>
+                    <i class="fas fa-eye toggle-pass" onclick="togglePassword('login-pass')"></i>
+                </div>
+
+                <a href="#" class="forgot-pass">Forgot Password?</a>
+
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+
+            <p class="switch-text">
+                Don't have an account? <span onclick="showSignup()">Sign Up</span>
+            </p>
+        </div>
+
+        <div id="signup-form" class="form-wrapper hidden">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join us for exclusive offers</p>
+
+            <form id="signup-form-element">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signup-name" placeholder="Full Name" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signup-email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signup-pass" placeholder="Password (Min 8 chars)" required minlength="8">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signup-confirm" placeholder="Confirm Password" required>
+                </div>
+
+                <p id="signup-error" class="error-text"></p>
+
+                <button type="submit" class="auth-btn">Sign Up</button>
+            </form>
+
+            <p class="switch-text">
+                Already have an account? <span onclick="showLogin()">Login</span>
+            </p>
+        </div>
+
+    </div>
+
+    <script type="module" src="scripts/auth.js"></script>
+</body>
+
+</html>
